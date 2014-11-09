@@ -1,0 +1,25 @@
+{
+  "name": "node-dota2-api",
+  "version": "0.0.1",
+  "description": "Dota2 web api node.js version",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test-all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/booxood/node-dota2-api.git"
+  },
+  "keywords": [
+    "dota2",
+    "web",
+    "api",
+    "steam"
+  ],
+  "author": "Liucw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/booxood/node-dota2-api/issues"
+  },
+  "homepage": "https://github.com/booxood/node-dota2-api"
+}
