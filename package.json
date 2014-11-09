@@ -1,5 +1,5 @@
 {
-  "name": "node-dota2-api",
+  "name": "dota2-api",
   "version": "0.0.1",
   "description": "Dota2 web api node.js version",
   "main": "index.js",
@@ -21,5 +21,23 @@
   "bugs": {
     "url": "https://github.com/booxood/node-dota2-api/issues"
   },
-  "homepage": "https://github.com/booxood/node-dota2-api"
+  "homepage": "https://github.com/booxood/node-dota2-api",
+  "config": {
+    "blanket": {
+      "pattern": "//^((?!(node_modules|test)).)*$/"
+    },
+    "travis-cov": {
+      "threshold": 90
+    }
+  },
+  "dependencies": {
+    "request": "^2.47.0",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "mocha": "^2.0.1",
+    "should": "^4.2.1",
+    "travis-cov": "^0.2.5"
+  }
 }

@@ -1,6 +1,6 @@
 TESTS = $(shell find test -type f -name "*.js")
 REPORTER = spec
-TIMEOUT = 5000
+TIMEOUT = 10000
 MOCHA_OPTS =
 
 install:
