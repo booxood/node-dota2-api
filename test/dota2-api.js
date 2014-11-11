@@ -34,10 +34,16 @@ describe('Dota2Api test case', function() {
             });
         });
 
-        it('should return Dota2Api instance, create no key', function() {
-            var da = Dota2Api.create('a key');
-            da.should.be.an.instanceof(Dota2Api);
+        it('should return , getMatchDetails', function(done) {
+            da.getMatchDetails({match_id: 'match id'}, function(err, result){
+                should.not.exist(err);
+                should.exist(result);
+                done();
+            });
         });
+
+
     });
 
 });
+
