@@ -25,12 +25,18 @@ Example:
 
 ## API
 
-Methods relating to Dota 2 matches.
+**Methods relating to Dota 2 matches.**
 
-### Dota2Api.create(key)
+### Dota2Api.create(key, [ID])
 Create Dota2Api instance,require a key.(if no, see [here](http://steamcommunity.com/dev/apikey))
+
+List of IDs:
+- 570 Dota 2 (**default**)
+- 816 Dota 2 internal test
+- 205790 Dota 2 (beta) test
+
 ```javascript
-  var da = Dota2Api.create('a key');
+  var da = Dota2Api.create('a key', 570);
 ```
 
 ### Dota2Api.prototype.getLeagueListing([options], callback)
@@ -105,7 +111,7 @@ Stats about a particular player within a tournament.
   })
 ```
 
-Methods relating to Dota 2.
+**Methods relating to Dota 2.**
 
 ### Dota2Api.prototype.getRarities([options], callback)
 Dota 2 item rarity list.
