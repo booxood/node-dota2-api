@@ -1,6 +1,6 @@
 {
   "name": "dota2-api",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Dota2 web api node.js version",
   "main": "index.js",
   "scripts": {
