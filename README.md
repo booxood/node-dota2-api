@@ -153,5 +153,32 @@ Options:
   - **leagueid (Optional) (int)** – The ID of the league to get the prize pool of.
 
 
+## TODO:
+Implement this methods(https://wiki.teamfortress.com/wiki/WebAPI#Dota_2):
+
+IEconDOTA2_<ID>
+- GetEventStatsForAccount
+
+IDOTA2MatchStats_<ID>
+- GetRealtimeStats
+
+IDOTA2Fantasy_<ID>
+- GetFantasyPlayerStats
+- GetPlayerOfficialInfo
+
+IDOTA2StreamSystem_<ID>
+- GetBroadcasterInfo
+
+IDOTA2Teams_<ID>
+- GetTeamInfo
+
+IDOTA2AutomatedTourney_<ID>
+- GetActiveTournamentList
+
+IDOTA2Ticket_<ID>
+- SetSteamAccountPurchased
+- SteamAccountValidForEvent
+
 ## License
 [The MIT License](https://github.com/booxood/node-dota2-api/blob/master/LICENSE)
+
