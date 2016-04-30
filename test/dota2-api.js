@@ -1,7 +1,10 @@
 'use strict'
 
-var should = require('should'); // eslint-disable-line no-unused-vars
+var should = require('should');
 var Dota2Api = require('../index.js');
+
+var API_KEY = 'fake_key';
+
 
 describe('Dota2Api test case', function() {
 
@@ -15,15 +18,26 @@ describe('Dota2Api test case', function() {
         });
 
         it('should return Dota2Api instance, create no key', function() {
-            var da = Dota2Api.create('a key');
+            var da = Dota2Api.create(API_KEY);
             da.should.be.an.instanceof(Dota2Api);
         });
     });
 
-    describe('Dota2Api prototype function', function() {
-        var da
+    // IMPORTANT API_KEY is not real steam key and it doesn't works.
+    // But when we do right API calls with all required parameters and this key,
+    // STeam returns HTML with test:
+    // ---------------
+    //    Forbidden
+    //    Access is denied. Retrying will not help. Please verify your
+    //    key=
+    //    parameter.
+    // ---------------
+    // So this tests are based on this behavior.
+    // They do not guarantee that everything works correctly
+    describe('Dota2Api prototype function return text "Forbidden" (better look at comment inside tests code)', function() {
+        var da;
         before(function() {
-            da = Dota2Api.create('a key');
+            da = Dota2Api.create(API_KEY);
         });
 
         it('should return , getLeagueListing', function(done) {
@@ -75,12 +89,12 @@ describe('Dota2Api test case', function() {
             });
         });
 
-        // it('should return , getTournamentPlayerStats', function(done) {
-        //     da.getTournamentPlayerStats({account_id: 87691567}).then(function(result){
-        //         should.exist(result);
-        //         done();
-        //     });
-        // });
+        it('should return , getTournamentPlayerStats', function(done) {
+            da.getTournamentPlayerStats({account_id: 2}).then(null, function(result){
+                should.exist(result);
+                done();
+            });
+        });
 
         it('should return , getGameItems', function(done) {
             da.getGameItems({language: 'zh'}).then(null, function(result){
