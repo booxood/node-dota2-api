@@ -3,6 +3,8 @@
 
 [![Build Status](https://travis-ci.org/booxood/node-dota2-api.png?branch=master)](https://travis-ci.org/booxood/node-dota2-api)
 
+**IMPOERANT: API is based on promises from v0.2.0**
+
 Dota2 web api node.js version.See detail [here](https://wiki.teamfortress.com/wiki/WebAPI#Dota_2)
 
 ## Install
