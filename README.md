@@ -16,8 +16,7 @@ Example:
 ```javascript
   var Dota2Api = require('dota2-api');
   var da = Dota2Api.create('a key');
-  da.getMatchHistory(function(err, result){
-    if(!err)
+  da.getMatchHistory().then(function(result) {
       console.log(result);
   })
 ```
@@ -39,11 +38,10 @@ List of IDs:
   var da = Dota2Api.create('a key', 570);
 ```
 
-### Dota2Api.prototype.getLeagueListing([options], callback)
+### Dota2Api.prototype.getLeagueListing([options])
 Information about DotaTV-supported leagues.
 ```javascript
-  da.getLeagueListing({language: 'zh'}, function(err, result){
-    if(!err)
+  da.getLeagueListing({language: 'zh'}).then(function(result) {
       console.log(result);
   })
 ```
@@ -51,91 +49,81 @@ Information about DotaTV-supported leagues.
 ### Dota2Api.prototype.getLiveLeagueGames(callback)
 A list of in-progress league matches, as well as details of that match as it unfolds.
 ```javascript
-  da.getLiveLeagueGames(function(err, result){
-    if(!err)
+  da.getLiveLeagueGames().then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getMatchDetails([options], callback)
+### Dota2Api.prototype.getMatchDetails([options])
 Information about a particular match.
 ```javascript
-  da.getMatchDetails({match_id: 'xxx'}, function(err, result){
-    if(!err)
+  da.getMatchDetails({match_id: 'xxx'}).then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getMatchHistory([options], callback)
+### Dota2Api.prototype.getMatchHistory([options])
 A list of matches, filterable by various parameters.
 ```javascript
-  da.getMatchHistory(function(err, result){
-    if(!err)
+  da.getMatchHistory().then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getMatchHistoryBySequenceNum([options], callback)
+### Dota2Api.prototype.getMatchHistoryBySequenceNum([options])
 A list of matches ordered by their sequence num.
 ```javascript
-  da.getMatchHistoryBySequenceNum(function(err, result){
-    if(!err)
+  da.getMatchHistoryBySequenceNum().then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getScheduledLeagueGames([options], callback)
+### Dota2Api.prototype.getScheduledLeagueGames([options])
 A list of scheduled league games coming up.
 ```javascript
-  da.getScheduledLeagueGames(function(err, result){
-    if(!err)
+  da.getScheduledLeagueGames().then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getTeamInfoByTeamID([options], callback)
+### Dota2Api.prototype.getTeamInfoByTeamID([options])
 A list of all the teams set up in-game.
 ```javascript
-  da.getTeamInfoByTeamID(function(err, result){
-    if(!err)
+  da.getTeamInfoByTeamID().then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getTournamentPlayerStats([options], callback)
+### Dota2Api.prototype.getTournamentPlayerStats([options])
 Stats about a particular player within a tournament.
 ```javascript
-  da.getTournamentPlayerStats({account_id: 'xxx'}, function(err, result){
-    if(!err)
+  da.getTournamentPlayerStats({account_id: 'xxx'}).then(function(result) {
       console.log(result);
   })
 ```
 
 **Methods relating to Dota 2.**
 
-### Dota2Api.prototype.getRarities([options], callback)
+### Dota2Api.prototype.getRarities([options])
 Dota 2 item rarity list.
 ```javascript
-  da.getRarities({language: 'zh'}, function(err, result){
-    if(!err)
+  da.getRarities({language: 'zh'}).then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getHeroes([options], callback)
+### Dota2Api.prototype.getHeroes([options])
 A list of heroes within Dota 2.
 ```javascript
-  da.getHeroes({language: 'zh'}, function(err, result){
-    if(!err)
+  da.getHeroes({language: 'zh'}).then(function(result) {
       console.log(result);
   })
 ```
 
-### Dota2Api.prototype.getTournamentPrizePool([options], callback)
+### Dota2Api.prototype.getTournamentPrizePool([options])
 The current prizepool for specific tournaments.
 ```javascript
-  da.getTournamentPrizePool(function(err, result){
-    if(!err)
+  da.getTournamentPrizePool().then(function(result) {
       console.log(result);
   })
 ```

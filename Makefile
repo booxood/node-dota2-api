@@ -5,6 +5,13 @@ MOCHA_OPTS =
 
 install:
 	@npm install
+
+lint:
+	@npm run lint
+
+build:
+	@npm run build
+
 test: install
 	@NODE_ENV=test ./node_modules/mocha/bin/mocha \
 		--reporter $(REPORTER) \
@@ -18,6 +25,6 @@ test-cov:
 	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
 	@ls -lh coverage.html
 
-test-all: test test-cov
+test-all: lint build test test-cov
 
 .PHONY: test test-cov test-all
