@@ -48,7 +48,6 @@ export function getTeamInfoByTeamID(options) {
     return this._request(path, validOptionKeys, options);
 }
 
-
 export function getTournamentPlayerStats(options) {
     const validOptionKeys = ['account_id', 'league_id', 'hero_id', 'time_frame'];
     const path = `IDOTA2Match_${this.ID}/GetTournamentPlayerStats/v2`;
@@ -56,7 +55,12 @@ export function getTournamentPlayerStats(options) {
     return this._request(path, validOptionKeys, options);
 }
 
-// TODO: check method GetTopLiveGame
+export function getTopLiveGame(options) {
+    const validOptionKeys = ['parner'];
+    const path = `IDOTA2Match_${this.ID}/GetTopLiveGame/v1`;
+
+    return this._request(path, validOptionKeys, options);
+}
 
 // IEconDOTA2_<ID> part
 
@@ -104,6 +108,7 @@ export default {
     getScheduledLeagueGames,
     getTeamInfoByTeamID,
     getTournamentPlayerStats,
+    getTopLiveGame,
     getGameItems,
     getItemIconPath,
     getRarities,

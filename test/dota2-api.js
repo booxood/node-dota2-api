@@ -96,6 +96,13 @@ describe('Dota2Api test case', function() {
             });
         });
 
+        it('should return , GetTopLiveGame', function(done) {
+            da.getTopLiveGame({parner: 1}).then(null, function(result){
+                should.exist(result);
+                done();
+            });
+        });
+
         it('should return , getGameItems', function(done) {
             da.getGameItems({language: 'zh'}).then(null, function(result){
                 result.should.match(/Forbidden/);
@@ -130,7 +137,6 @@ describe('Dota2Api test case', function() {
                 done();
             });
         });
-
 
     });
 

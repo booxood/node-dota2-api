@@ -130,11 +130,6 @@ Options:
 
 ### Dota2Api.prototype.getTournamentPlayerStats([options])
 Stats about a particular player within a tournament.
-
-**Methods relating to Dota 2.**
-
-### Dota2Api.prototype.getTournamentPlayerStats([options])
-Stats about a particular player within a tournament.
 Options:
   account_id (string)
       32-bit account ID.
@@ -144,6 +139,13 @@ Options:
       A list of hero IDs can be found via the GetHeroes method.
   time_frame (Optional) (string)
       Only return stats between this time frame (parameter format not yet known).
+
+### Dota2Api.prototype.getTopLiveGame([options])
+Options:
+    parner (int32)
+         Which partner's games to use.
+
+**Methods relating to Dota 2.**
 
 ### Dota2Api.prototype.getGameItems([options])
 Dota 2 In-game items
