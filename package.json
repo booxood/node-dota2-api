@@ -24,14 +24,6 @@
     "url": "https://github.com/booxood/node-dota2-api/issues"
   },
   "homepage": "https://github.com/booxood/node-dota2-api",
-  "config": {
-    "blanket": {
-      "pattern": "//^((?!(node_modules|test)).)*$/"
-    },
-    "travis-cov": {
-      "threshold": 90
-    }
-  },
   "dependencies": {
     "es6-object-assign": "^1.0.1",
     "es6-promise": "^3.1.2",
@@ -51,6 +43,7 @@
     "eslint-plugin-import": "^1.6.1",
     "eslint-plugin-jsx-a11y": "^1.0.4",
     "eslint-plugin-react": "^5.0.1",
+    "istanbul": "0.4.3",
     "mocha": "^2.0.1",
     "should": "^4.2.1",
     "travis-cov": "^0.2.5"

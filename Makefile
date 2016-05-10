@@ -6,25 +6,37 @@ MOCHA_OPTS =
 install:
 	@npm install
 
-lint:
+lint: install
 	@npm run lint
 
 build:
 	@npm run build
 
-test: install
+test: install lint
 	@NODE_ENV=test ./node_modules/mocha/bin/mocha \
-		--reporter $(REPORTER) \
 		--timeout $(TIMEOUT) \
 		$(MOCHA_OPTS) \
 		$(TESTS)
 
 test-cov:
-	@rm -f coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
-	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
-	@ls -lh coverage.html
+	@NODE_ENV=test node \
+		./node_modules/.bin/istanbul cover \
+		./node_modules/mocha/bin/_mocha \
+		-- -u exports \
+		--timeout $(TIMEOUT) \
+		$(MOCHA_OPTS) \
+		$(TESTS)
 
-test-all: lint build test test-cov
+test-travis:
+	@NODE_ENV=test node \
+		./node_modules/.bin/istanbul cover \
+		./node_modules/mocha/bin/_mocha \
+		--report lcovonly \
+		-- -u exports \
+		--timeout $(TIMEOUT) \
+		$(MOCHA_OPTS) \
+		$(TESTS)
 
-.PHONY: test test-cov test-all
+test-all: test test-cov 
+
+.PHONY: test-cov test-travis test-all build
