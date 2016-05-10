@@ -1,7 +1,7 @@
 # Dota2 Web Api
 
 
-[![Build Status](https://travis-ci.org/booxood/node-dota2-api.png?branch=master)](https://travis-ci.org/booxood/node-dota2-api)
+[![Build Status](https://travis-ci.org/booxood/node-dota2-api.svg?branch=master)](https://travis-ci.org/booxood/node-dota2-api)
 [![Coverage Status](https://coveralls.io/repos/booxood/node-dota2-api/badge.svg)](https://coveralls.io/r/booxood/node-dota2-api)
 
 
