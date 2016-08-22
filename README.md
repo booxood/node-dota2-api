@@ -123,7 +123,7 @@ Options:
 
 ### Dota2Api.prototype.getTopLiveGame([options])
 Options:
-  - **parner (int32)** – Which partner's games to use.
+  - **partner (int32)** – Which partner's games to use.
 
 **Methods relating to Dota 2.**
 

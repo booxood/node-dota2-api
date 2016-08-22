@@ -56,7 +56,7 @@ export function getTournamentPlayerStats(options) {
 }
 
 export function getTopLiveGame(options) {
-    const validOptionKeys = ['parner'];
+    const validOptionKeys = ['partner'];
     const path = `IDOTA2Match_${this.ID}/GetTopLiveGame/v1`;
 
     return this._request(path, validOptionKeys, options);

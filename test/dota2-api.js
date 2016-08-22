@@ -97,7 +97,7 @@ describe('Dota2Api test case', function() {
         });
 
         it('should return , GetTopLiveGame', function(done) {
-            da.getTopLiveGame({parner: 1}).then(null, function(result){
+            da.getTopLiveGame({partner: 1}).then(null, function(result){
                 should.exist(result);
                 done();
             });
