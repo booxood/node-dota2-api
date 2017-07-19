@@ -1,5 +1,7 @@
 # Dota2 Web Api
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/booxood/node-dota2-api.svg)](https://greenkeeper.io/)
+
 
 [![Build Status](https://travis-ci.org/booxood/node-dota2-api.svg?branch=master)](https://travis-ci.org/booxood/node-dota2-api)
 [![Coverage Status](https://coveralls.io/repos/booxood/node-dota2-api/badge.svg)](https://coveralls.io/r/booxood/node-dota2-api)
